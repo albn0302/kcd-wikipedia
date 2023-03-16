@@ -21,7 +21,9 @@ const builder = imageUrlBuilder(client);
 /* Failed code for the image render, thanks for nothing Sanity */
 
 function urlFor(source) {
+
   return builder.image(source);
+
 }
 
 function App() {
@@ -35,17 +37,21 @@ function App() {
     /* Fetches the data */
 
     const dataFetch = async () => {
+
       const posts = await client.fetch('*[_type == "post"]') /* Not this one either, but it somehow works so I'm not complaining */
 
       /* Sets the state when the data is received */
 
       setData(posts)
+
     }
 
     dataFetch()
+
   }, [])
 
   return (
+
     <>
 
       {/* The navbar */}
@@ -140,7 +146,9 @@ function App() {
       </footer>
 
     </>
+
   );
+
 }
 
 export default App;
