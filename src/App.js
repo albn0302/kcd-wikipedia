@@ -13,7 +13,6 @@ import { useEffect, useState } from "react";
 import { client } from "./sanity";
 import imageUrlBuilder from "@sanity/image-url";
 
-
 /* Get a pre-configured url-builder from your sanity client */
 
 const builder = imageUrlBuilder(client);
@@ -67,7 +66,9 @@ function App() {
             {/* All the different buttons/text in the navbar */}
 
             <li onClick={() => { alert("This function is a work in progress..."); }} className="mt-16 text-black hover:text-amber-400 dark:hover:text-amber-200 dark:text-white static invisible sm:absolute md:static md:visible lg:visible lg:static xl:visible xl:static 2xl:visible 2xl:static"><a href="#">Navigation Page</a></li>
+
             <li onClick={() => { alert("This one aswell..."); }} className="mt-16 text-black hover:text-amber-400 dark:hover:text-amber-200 dark:text-white static invisible sm:absolute md:absolute lg:visible lg:static xl:visible xl:static 2xl:visible 2xl:static"><a href="#">Info</a></li>
+
             <li onClick={() => { alert("Ok, fr stop. All of these are a work in progress, nerd."); }} className="mt-16 text-black hover:text-amber-400 dark:hover:text-amber-200 dark:text-white static invisible sm:absolute md:absolute lg:visible lg:static xl:visible xl:static 2xl:visible 2xl:static"><a href="#">About</a></li>
 
             {/* This submits stuff from the search bar */}
@@ -91,9 +92,12 @@ function App() {
         {/* The post section */}
 
         <ul>
+
           {
             data.map(post =>
+
               <li className="text-black dark:text-white" key={post._id} /* Fetches the content from my Sanity project */>
+
                 {post.title} {/* Renders my header from my Sanity project */}
 
                 {/* This section is currently a work in progress */}
@@ -111,8 +115,10 @@ function App() {
                 <img src={meme} alt="meme"></img>
 
               </li>
+
             )
           }
+
         </ul>
 
       </main >
