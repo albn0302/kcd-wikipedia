@@ -31,6 +31,7 @@ function App() {
   const [data, setData] = useState([])
 
   useEffect(() => {
+
     /* Fetches the data */
 
     const dataFetch = async () => {
